@@ -95,6 +95,8 @@ public class PdfConverter implements Runnable {
             }
         });
         WebSettings settings = mWebView.getSettings();
+        // disable webview zoom as per font scale in android settings
+        settings.setTextZoom(100);
         settings.setDefaultTextEncodingName("utf-8");
         mWebView.loadData(mHtmlString, "text/HTML; charset=utf-8", null);
     }
