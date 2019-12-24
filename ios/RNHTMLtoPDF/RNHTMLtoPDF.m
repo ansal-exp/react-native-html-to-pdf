@@ -9,8 +9,8 @@
 #import <React/UIView+React.h>
 #import <React/RCTUtils.h>
 #import "RNHTMLtoPDF.h"
-
-#define PDFSize CGSizeMake(612,792)
+// adjust page size
+#define PDFSize CGSizeMake(595.2,841.8)//CGSizeMake(612,792) //CGSizeMake(595.2,841.8)
 
 @implementation UIPrintPageRenderer (PDF)
 - (NSData*) printToPDF:(NSInteger**)_numberOfPages
